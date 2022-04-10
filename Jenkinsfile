@@ -62,7 +62,7 @@ pipeline {
 
        stage('Deploy the Helm chart to Non Prod Helm Repository') {
         when {
-                expression { BRANCH_NAME ==~ /(integration|develop|master)/ }
+                expression { BRANCH_NAME ==~ /(integration|develop|main|master)/ }
             }
          steps {
                     sh '''
